@@ -620,10 +620,12 @@ span {
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease;
+    z-index: 5;
 }
 
 .slider-button:hover {
-    background-color: rgba(0, 0, 255, 0.8);
+    background-color: var(--main-color);
+    box-shadow: 0 0 40px #0a3a75;
     color: #fff;
 }
 
@@ -638,3 +640,58 @@ span {
     font-size: 24px;
 }
 
+.popup{
+    background-color: var(--main-color);
+    width: 450px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+}
+.popup button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+.popup a {
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #ffffff;
+    color: var(--main-color);
+    text-decoration: none;
+    padding: 5px 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 4;
+}
+.popup h2 {
+    font-size: 25px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 30px;
+}
+.foundme {
+    background-color: var(--second-bg-color);
+
+}
+.bi bi-tiktok {
+    color: var(--teks-color);
+}
