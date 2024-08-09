@@ -99,27 +99,27 @@
             </div>
         </div>
     </section>
-    <section class="mycreation" id="mycreation">
-        <div class="slider-container">
-            <button class="slider-button prev" aria-label="Previous">&lt;</button>
-            <div class="slider">
-                <div class="slider-item" id="item1">
-                    <img src="image/3d animation.png" alt="Image 1">
-                </div>
-                <div class="slider-item" id="item2">
-                    <img src="image/game make.png" alt="Image 2">
-                </div>
-                <div class="slider-item active" id="item3">
-                    <img src="image/editor.png" alt="Image 3">
-                </div>
-                <div class="slider-item" id="item4">
-                    <img src="image/gamer.jpeg" alt="Image 4">
-                </div>
-                <div class="slider-item" id="item5">
-                    <img src="image/code.png" alt="Image 5">
-                </div>
+    <section class="s3">
+        <div class="image">
+            <div class="slide" style="background-image: url(image/3danimation.png);">
+                <h3>3d animation</h3>
             </div>
-            <button class="slider-button next" aria-label="Next">&gt;</button>
+
+            <div class="slide" style="background-image: url(image/code.png);">
+                <h3>coder</h3>
+            </div>
+
+            <div class="slide " style="background-image: url(image/editor.png);">
+                <h3>editor</h3>
+            </div>
+
+            <div class="slide" style="background-image: url(image/gamemake.png);">
+                <h3>Game Creator</h3>
+            </div>
+
+            <div class="slide" style="background-image: url(image/gamer.jpeg);">
+                <h3>gamer</h3>
+            </div>
         </div>
     </section>
     <section class="foundme" id="foundme">
@@ -143,8 +143,10 @@
             </a>
           </div>             
         </div>
+        
           
     </section>
+    
     <div class="popup">
         <button id="close">&times;</button>
         <h2>hello</h2>
@@ -156,5 +158,28 @@
         <a href="#">Let's Go</a>
     </div>
     <script src="script.js"></script>
+    <script>
+        activeslideimg();
+
+        function activeslideimg(activeSlide = 2) {
+            const slides = document.querySelectorAll(".slide");
+
+            slides[activeSlide].classList.add("active");
+
+            for (const slide of slides) {
+                slide.addEventListener("click", () => {
+                    clearActiveClasses();
+
+                    slide.classList.add("active");
+            });
+            }
+
+            function clearActiveClasses() {
+                slides.forEach((slide) => {
+                    slide.classList.remove("active")
+                })
+            }
+        }
+    </script>
 </body>
 </html>  

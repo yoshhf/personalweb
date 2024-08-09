@@ -604,6 +604,21 @@ span {
     .home-img img{
         width: 56vw;
     }
+    .image {
+        display: flex;
+        height: 90vh;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .slide {
+        width: 90vw;
+        border-radius: 20px;
+        margin: 10px;
+    }
+    
     
     
 }
@@ -695,3 +710,54 @@ span {
 .bi bi-tiktok {
     color: var(--teks-color);
 }
+.s3 {
+    font-family: "blank Ops One", cursive;
+    overflow: hidden;
+    margin: 0;
+    background: var(--bg-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+}
+.slide {
+    height: 80vh;
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+    color: var(--teks-color);
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 0.7s ease-in-out;
+    filter: blur(4px);
+}
+.slide h3 {
+    position: absolute;
+    font-size: clamp(1rem, 5vw , 5rem);
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0; 
+    background-color: #e3fdf5;
+    background-image: var(--main-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.slide.active {
+    flex: 10;
+    filter: blur(0px);
+}
+.slide.active h3 {
+    opacity: 1;
+    transition: opacity 0.3 ease-in-out 0.4s;
+}
+
